@@ -1,0 +1,63 @@
+.about-agency {
+    display: flex;
+    justify-content: space-between;
+}
+
+.agency {
+    &-photo {
+        width: 48%;
+        & img {
+            height: 380px;
+        }
+    }
+
+    &-info {
+        width: 48%;
+        &__title {
+            margin-bottom: 20px;
+            font-size: $font-sm;
+            font-weight: bold;
+        }
+    
+        &__text {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.agency-list {
+    padding-left: 10px;
+    &__item {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    & i {
+        color: $orange;
+        font-weight: 900;
+    }
+}
+
+@include max_w_768 {
+    .about-agency {
+        flex-direction: column;
+        align-items: center
+    }
+
+    .agency {
+        &-photo {
+            width: 100%;
+            & img {
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+
+        &-info {
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+}

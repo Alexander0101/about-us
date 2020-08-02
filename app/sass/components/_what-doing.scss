@@ -1,0 +1,42 @@
+.wrap-what-doing {
+    background: #eeeeee;
+}
+
+.what-doing {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+        width: 31%;
+        border: 1px solid #e0e0e0;
+        background: $white;
+    }
+
+    &-info {
+        padding: 30px 22px 40px;
+        &__title {
+            margin-bottom: 30px;
+            font-size: $font-sm;
+            font-weight: bold;
+        }
+    }
+}
+
+@include max_w_768 {
+    .what-doing {
+        flex-direction: column;
+        align-items: center;
+        &-item {
+            margin-bottom: 32px;
+            width: 370px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@include max_w_480 {
+    .what-doing-item {
+        width: 100%;
+    }
+}

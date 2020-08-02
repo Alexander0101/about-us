@@ -1,0 +1,41 @@
+.footer {
+    color: $white;
+    background: $dark-grey;
+    flex-shrink: 0; // Fix sticky footer for IE
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+
+    & a {
+        margin-left: 25px;
+        font-size: $font-sm;
+        @include transition(0.6s);
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+
+@include max_w_480 {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .rights {
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 15px;
+        & a:first-child {
+            margin-left: 0;
+        }
+    }
+}

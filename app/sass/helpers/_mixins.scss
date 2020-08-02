@@ -1,0 +1,29 @@
+// Transition
+@mixin transition($time) {
+	transition: all $time;
+}
+
+// mq max
+@mixin max_w_480 {
+	@media (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin max_w_768 {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin max_w_992 {
+	@media (max-width: 992px) {
+		@content;
+	}
+}
+
+@mixin max_w_1200 {
+	@media (max-width: 1200px) {
+		@content;
+	}
+}
